@@ -1,0 +1,6 @@
+pandas
+Flask
+numpy
+matplotlib
+flask_cors
+tqdm
