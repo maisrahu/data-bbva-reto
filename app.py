@@ -31,8 +31,9 @@ def predict_products(dni):
 
 
     result = MODEL.predict(data)
+    productos = get_list_products(result[0])    
 
-    return result[0]
+    return productos
 
 
 @app.route('/get_products', methods=['POST'])
