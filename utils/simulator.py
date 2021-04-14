@@ -28,7 +28,5 @@ def simulate(n=100, seed=None):
         'perfil_rcc': perfil_rcc}
 
     df = pd.DataFrame(data=d)
-
-    return df 
-
-print(simulate(1000))
+    
+    return df
