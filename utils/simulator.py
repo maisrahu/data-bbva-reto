@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 
 # url: http://clientes.serpost.com.pe/prj_pjudicial/ubigeo.aspx
 
-def simulate(n=100, seed=None):
+def simulate(data_path='Data\\', n=100, seed=None):
     if seed==None:
         np.random.seed()
     else:
@@ -18,7 +18,7 @@ def simulate(n=100, seed=None):
     # Generate ubigeo_list
     path = os.getcwd()
     print(os.path.abspath(os.path.join(path, os.pardir)))
-    data_path =  'Data\\'
+    #data_path =  'Data\\'
     filename = 'ubigeo.csv'
     df_ubigeo = pd.read_csv(data_path + filename, sep=';')
     ubigeo_list = list(df_ubigeo[df_ubigeo.DEPARTAMENTO == 'LIMA'].UBIGEO.unique())
