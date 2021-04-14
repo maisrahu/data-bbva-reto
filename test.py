@@ -1,11 +1,25 @@
+#%%
 import pandas as pd 
 import numpy as np 
 import matplotlib as plt
 import utils.simulator as simu 
 
-from sklearn.clusters import KMeans
-from sklearn.metrics import pairwise_distances_argmin_min
+#%%
+df_final = pd.read_csv('Data\\df_final_target.csv')
 
 
-df = simu.simulate(1000)
-print(df)
+
+# %%
+productos = {
+    'cluster': ['0', '1', '2'],
+    'producto': [
+        ['tarjeta de crédito', 'tarjeta adicional', 't_cambio'],
+        ['préstamo al toque', 'adelanto en sueldo'],
+        ['depósito a plazo','fondos mutuos']]
+}
+
+df = pd.DataFrame(productos)
+
+
+
+# %%
