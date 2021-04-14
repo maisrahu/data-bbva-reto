@@ -13,13 +13,13 @@ df_final = pd.read_csv('Data\\df_final_target.csv')
 productos = {
     'cluster': ['0', '1', '2'],
     'producto': [
-        ['tarjeta de crédito', 'tarjeta adicional', 't_cambio'],
-        ['préstamo al toque', 'adelanto en sueldo'],
-        ['depósito a plazo','fondos mutuos']]
+        ['Cuentas de Ahorro', 'Tarjeta de Crédito', 'Tarjeta Adicional', 'BBVA T-Cambio'],
+        ['Préstamo al Toque', 'Adelanto en Sueldo'],
+        ['Depósito a Plazo','Fondos Mutuos']]
 }
 
 df = pd.DataFrame(productos)
-
+df.to_csv('Data\\cluster_productos.csv')
 
 
 # %%
