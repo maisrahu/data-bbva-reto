@@ -30,8 +30,8 @@ def predict_products(dni):
             'segmento':"SEGM1"}, ignore_index=True)
 
 
-    result = MODEL.predict(data)
-    productos = get_list_products(result[0])    
+    cluster = MODEL.predict(data)
+    productos = get_list_products(cluster[0])    
 
     return productos
 

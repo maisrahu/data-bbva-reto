@@ -13,7 +13,7 @@ import lightgbm as lgb
 
 COLS_YES = ["log_ingreso_mens", "log_num_seguros_salud", "log_rcc_nro_prod", "log_rcc_linea_tc_max", 
             "log_rcc_num_ent_sbs", "log_edad", "log_diff_lj_created","enc_rcc_cal_gral",
-            "enc_nse", "enc_segmento", "enc_gender", "le_provincia"]
+            "enc_nse", "enc_segmento", "enc_gender"]
 
 class Model():
     def __init__(self, path_filename):
