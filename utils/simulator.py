@@ -2,10 +2,10 @@ import pandas as pd
 import numpy as np
 import math
 import random
-import requests 
+#import requests 
 import os
 import matplotlib.pyplot as plt
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 
 # url: http://clientes.serpost.com.pe/prj_pjudicial/ubigeo.aspx
 
