@@ -1,4 +1,4 @@
 ,cluster,producto
-0,0,"['Cuentas de Ahorro', 'Tarjeta de Crédito', 'Tarjeta Adicional', 'BBVA T-Cambio']"
-1,1,"['Préstamo al Toque', 'Adelanto en Sueldo']"
-2,2,"['Depósito a Plazo', 'Fondos Mutuos']"
+0,0,"Cuentas de Ahorro, Tarjeta de Crédito, BBVA T-Cambio"
+1,1,"Préstamo al Toque, Adelanto en Sueldo"
+2,2,"Depósito a Plazo, Fondos Mutuos"

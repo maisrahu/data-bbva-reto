@@ -13,9 +13,9 @@ df_final = pd.read_csv('Data\\df_final_target.csv')
 productos = {
     'cluster': ['0', '1', '2'],
     'producto': [
-        ['Cuentas de Ahorro', 'Tarjeta de Crédito', 'Tarjeta Adicional', 'BBVA T-Cambio'],
-        ['Préstamo al Toque', 'Adelanto en Sueldo'],
-        ['Depósito a Plazo','Fondos Mutuos']]
+        'Cuentas de Ahorro, Tarjeta de Crédito, BBVA T-Cambio',
+        'Préstamo al Toque, Adelanto en Sueldo',
+        'Depósito a Plazo, Fondos Mutuos']
 }
 
 df = pd.DataFrame(productos)
