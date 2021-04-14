@@ -7,16 +7,7 @@ import os
 import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
 
-
-# path = os.getcwd()
-# print(os.path.abspath(os.path.join(path, os.pardir)))
-
-# data_path =  'Data\\' 
-# filename = 'ubigeo.csv'
-# df_ubigeo = pd.read_csv(data_path + filename, sep=';')
-
-# print(df_ubigeo)
-
+# url: http://clientes.serpost.com.pe/prj_pjudicial/ubigeo.aspx
 
 def simulate(n=100, seed=None):
     if seed==None:
@@ -24,9 +15,20 @@ def simulate(n=100, seed=None):
     else:
         np.random.seed(seed) 
     
+    # Generate ubigeo_list
+    path = os.getcwd()
+    print(os.path.abspath(os.path.join(path, os.pardir)))
+    data_path =  'Data\\'
+    filename = 'ubigeo.csv'
+    df_ubigeo = pd.read_csv(data_path + filename, sep=';')
+    ubigeo_list = list(df_ubigeo[df_ubigeo.DEPARTAMENTO == 'LIMA'].UBIGEO.unique())
+    ubigeo_prov = list(df_ubigeo[df_ubigeo.DEPARTAMENTO == 'LIMA'].PROVINCIA.unique())
+
+    # Generate dataframe
     dni = random.sample(range(n), n)
     edad = [int(np.random.triangular(18, 35, 75)) for i in range(n)]
-    # correo = ['']
+    cod_ubigeo = np.random.choice( a=ubigeo_list, size=n )
+    provincia = np.random.choice( a=ubigeo_prov, size=n )
     rcc_cal_gral = np.random.choice( 
         a=["OK", "CPP", "PER", "DUD", "DEF"], 
         size=n, 
@@ -65,7 +67,8 @@ def simulate(n=100, seed=None):
     d = {
         'dni': dni, 
         'edad': edad,
-        # 'correo': correo,
+        'cod_ubigeo': cod_ubigeo,
+        'provincia': provincia,
         'rcc_cal_gral': rcc_cal_gral,
         'rcc_num_ent_sbs': rcc_num_ent_sbs,
         'rcc_linea_tc_max': rcc_linea_tc_max,
@@ -82,3 +85,5 @@ def simulate(n=100, seed=None):
     
     return df
 
+
+print(simulate(10))
