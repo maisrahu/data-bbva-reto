@@ -82,5 +82,5 @@ def simulate(n=100, seed=None):
         'segmento': segmento,
         'prod_interes': prod_interes}
     df = pd.DataFrame(data=d)
-    
+
     return df
